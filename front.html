@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Front</title>
+</head>
+
+<body>
+    <svg display="none">
+</svg>
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__main">
+        <div class="header__container container">
+            <div class="header__row">
+                <div class="header__column">
+                    <a href="" class="header__logo">
+                        <img src="img/logo-light.svg" alt="logo-img">
+                    </a>
+                </div>
+                <div class="header__column">
+                    <nav class="header__menu menu-header" data-da="mobile-header__body, 1, 1024.98">
+                        <ul class="menu-header__list">
+                            <li class="menu-header__item">
+                                <a href="" class="menu-header__link ">Home</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="" class="menu-header__link ">About</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="" class="menu-header__link ">Solutions</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="" class="menu-header__link ">Services</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="" class="menu-header__link ">Benefits</a>
+                            </li>
+                            <li class="menu-header__item">
+                                <a href="" class="menu-header__link ">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__column">
+                    <div class="header__language language-header" data-da="mobile-header__body, 0, 1024.98">
+                        <div class="language-header__dropdown dropdown">
+                            <button class='dropdown__btn'>ENG</button>
+                            <ul class="dropdown__list">
+                                <li class="dropdown__item selected" data-dropdown="">ENG</li>
+                                <li class="dropdown__item" data-dropdown="">RUS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__column">
+                    <a href="" class="header__btn btn " data-da="mobile-header__body, 2, 1024.98">
+                        <span>Contact</span>
+                    </a>
+                    <button class="header__burger">
+                        <span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__mobile mobile-header">
+        <div class="mobile-header__container container">
+            <div class="mobile-header__inner">
+                <div class="mobile-header__body"></div>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="front">
+            <div class="otc-deal">
+                <div class="otc-deal__container container">
+                    <form action="#" class="otc-deal__form form">
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">From</div>
+                                <div class="form__dropdown-block">
+                                    <div class="form__dropdown dropdown">
+                                        <button class='dropdown__btn'>Select...</button>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item" data-dropdown="USD">USDT</li>
+                                            <li class="dropdown__item" data-dropdown="EUR">EUR</li>
+                                            <li class="dropdown__item" data-dropdown="CNY">CNY</li>
+                                            <li class="dropdown__item" data-dropdown="GBP">GBP</li>
+                                        </ul>
+                                        <input type='text' name='form[]' value='' class='dropdown__input-hidden'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">To</div>
+                                <div class="form__dropdown-block">
+                                    <div class="form__dropdown dropdown">
+                                        <button class='dropdown__btn'>Select...</button>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item" data-dropdown="USD">USDT</li>
+                                            <li class="dropdown__item" data-dropdown="EUR">EUR</li>
+                                            <li class="dropdown__item" data-dropdown="CNY">CNY</li>
+                                            <li class="dropdown__item" data-dropdown="GBP">GBP</li>
+                                        </ul>
+                                        <input type='text' name='form[]' value='' class='dropdown__input-hidden'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Amount to sell</div>
+                                <input placeholder="Enter amount" autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Amount to buy</div>
+                                <input placeholder="Enter amount" autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Acount number / IBAN</div>
+                                <input placeholder="UA89786754678" autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Bank name</div>
+                                <input placeholder="First National bank" autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Country</div>
+                                <div class="form__dropdown-block">
+                                    <div class="form__dropdown dropdown">
+                                        <button class='dropdown__btn'>Select country</button>
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item" data-dropdown="Ukraine">Ukraine</li>
+                                            <li class="dropdown__item" data-dropdown="Germany">Germany</li>
+                                            <li class="dropdown__item" data-dropdown="China">China</li>
+                                            <li class="dropdown__item" data-dropdown="England">England</li>
+                                        </ul>
+                                        <input type='text' name='form[]' value='' class='dropdown__input-hidden'>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Beneficiary address</div>
+                                <input placeholder="Enter adress" autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Account Holder Name</div>
+                                <input placeholder="Enter ..." autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">SWIFT/BIC</div>
+                                <input placeholder="ZXCVBN" autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <div class="form__item">
+                                <div class="form__label">Purpose of payment</div>
+                                <input placeholder="Payment under invoice" autocomplete='off' type='text' name='form[]'
+                                    class='form__input'>
+                            </div>
+                        </div>
+                        <div class="form__column">
+                            <button type='submit' class='form__btn btn'>
+                                <span>Start OTC Deal</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <section class="order-history">
+                <div class="order-history__top top-order-history">
+                    <div class="top-order-history__container container">
+                        <h2 class="top-order-history__title">Order History</h2>
+                    </div>
+                </div>
+                <div class="order-history__body">
+                    <table class="order-history__table">
+                        <thead>
+                            <tr>
+                                <th><span>Order ID</span></th>
+                                <th><span>Status</span></th>
+                                <th><span>Deposited amount</span></th>
+                                <th><span>Service fee</span></th>
+                                <th><span>Withdraw amount</span></th>
+                                <th><span>Deposit wallet</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span></span>90876</td>
+                                <td><span class="complete">Complete</span></td>
+                                <td><span></span>78654</td>
+                                <td><span></span>13</td>
+                                <td><span></span>876565</td>
+                                <td><span></span>First National bank</td>
+                            </tr>
+                            <tr>
+                                <td><span></span>0987</td>
+                                <td><span class="pending">Pending</span></td>
+                                <td><span></span>78654</td>
+                                <td><span></span>13</td>
+                                <td><span></span>876565</td>
+                                <td><span></span>First National bank</td>
+                            </tr>
+                            <tr>
+                                <td><span></span>0-987</td>
+                                <td><span class="declined">Declined</span></td>
+                                <td><span></span>78654</td>
+                                <td><span></span>13</td>
+                                <td><span></span>876565</td>
+                                <td><span></span>First National bank</td>
+                            </tr>
+                            <tr>
+                                <td><span></span>0987654</td>
+                                <td><span class="complete">Complete</span></td>
+                                <td><span></span>78654</td>
+                                <td><span></span>13</td>
+                                <td><span></span>876565</td>
+                                <td><span></span>First National bank</td>
+                            </tr>
+                            <tr>
+                                <td><span></span>8976</td>
+                                <td><span class="pending">Pending</span></td>
+                                <td><span></span>78654</td>
+                                <td><span></span>13</td>
+                                <td><span></span>876565</td>
+                                <td><span></span>First National bank</td>
+                            </tr>
+                            <tr>
+                                <td><span></span>89765</td>
+                                <td><span class="declined">Declined</span></td>
+                                <td><span></span>78654</td>
+                                <td><span></span>13</td>
+                                <td><span></span>876565</td>
+                                <td><span></span>First National bank</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="order-history__bottom bottom-order-history">
+                    <div class="bottom-order-history__container container">
+                        <div class="bottom-order-history__navigation navigation">
+                            <button class="navigation__btn navigation__btn_prev">Previous</button>
+                            <div class="navigation__pagination pagination-navigation">
+                                <a href="" class="pagination-navigation__page-numbers">1</a>
+                                <a href="" class="pagination-navigation__page-numbers current">2</a>
+                                <a href="" class="pagination-navigation__page-numbers">3</a>
+                            </div>
+                            <button class="navigation__btn navigation__btn_next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__row">
+            <div class="footer__column">
+                <a href="" class="footer__logo">
+                    <img src="img/logo-light.svg" alt="logo">
+                </a>
+                <div class="footer__copyright">© 2024 PayGlobal.pro. Все права защищены.</div>
+            </div>
+            <div class="footer__column">
+                <nav class="footer__menu menu-footer">
+                    <ul class="menu-footer__list">
+                        <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Privacy policy</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">User agreement</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Notification</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="" class="menu-footer__link">Assurance</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
