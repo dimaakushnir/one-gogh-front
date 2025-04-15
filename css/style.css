@@ -1553,6 +1553,7 @@ body.lock {
   mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
 }
 .invoice-payment__title {
+  position: relative;
   color: #FFFFFF;
   text-align: center;
 }
@@ -1560,6 +1561,7 @@ body.lock {
   margin: 0 0 30px 0;
 }
 .invoice-payment__qr-code {
+  position: relative;
   width: 180px;
   height: 180px;
   flex: 0 0 180px;
@@ -1572,6 +1574,7 @@ body.lock {
   max-width: 100%;
 }
 .invoice-payment__download {
+  position: relative;
   display: inline-flex;
   align-items: center;
   margin: 0 auto;
@@ -1590,6 +1593,7 @@ body.lock {
   margin: 0 8px 0 0;
 }
 .invoice-payment__address {
+  position: relative;
   display: inline-flex;
   font-weight: 400;
   font-size: 14px;
@@ -1619,6 +1623,7 @@ body.lock {
   padding: 12px 0;
   border-top: 1px solid #06318B;
   border-bottom: 1px solid #06318B;
+  position: relative;
 }
 .sum-invoice-payment__item {
   display: flex;
@@ -1651,6 +1656,7 @@ body.lock {
   padding: 17px 20px;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.4117647059);
+  position: relative;
 }
 .copy-invoice-payment__value {
   font-family: Inter;
