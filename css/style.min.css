@@ -320,6 +320,7 @@ body.lock {
   position: relative;
   height: 54px;
   width: 100%;
+  z-index: 2;
 }
 .form__dropdown {
   position: absolute;
@@ -1241,26 +1242,26 @@ body.lock {
   }
 }
 
-.front-3 .order-history {
+.front-2 .order-history {
   padding: 0 0 120px 0;
 }
 @media (max-width: 1370px) {
-  .front-3 .order-history {
+  .front-2 .order-history {
     padding: 0 0 110px 0;
   }
 }
 @media (max-width: 1024.98px) {
-  .front-3 .order-history {
+  .front-2 .order-history {
     padding: 0 0 100px 0;
   }
 }
 @media (max-width: 480.98px) {
-  .front-3 .order-history {
+  .front-2 .order-history {
     padding: 0 0 90px 0;
   }
 }
 @media (max-width: 480.98px) {
-  .front-3 .order-history {
+  .front-2 .order-history {
     padding: 0 0 80px 0;
   }
 }
@@ -1308,6 +1309,67 @@ body.lock {
   opacity: 1;
   visibility: visible;
   transition: all 0.4s ease-out;
+}
+
+.popup-file::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6980392157);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-out;
+}
+.popup-file.open::before {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease-out;
+}
+.popup-file__form:not(:last-child) {
+  margin: 0 0 30px 0;
+}
+.popup-file .invoice-payment__title {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 166.6666666667%;
+  letter-spacing: 6px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.form-popup-file__item {
+  position: relative;
+}
+.form-popup-file__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-size: 0;
+  cursor: pointer;
+}
+.form-popup-file__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 140px;
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12.9px;
+  line-height: 120.6976744186%;
+  letter-spacing: -0.13px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .payment-transfer {
@@ -1448,11 +1510,11 @@ body.lock {
 .contacts-payment-transfer__row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: 0 -6px;
 }
 .contacts-payment-transfer__column {
-  padding: 0 10px;
-  flex: 0 1 20%;
+  padding: 0 6px;
+  flex: 0 1 25%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -1473,6 +1535,172 @@ body.lock {
     flex: 1 1 100%;
   }
 }
+.contacts-payment-transfer__column_medium {
+  flex: 0 1 37.5%;
+}
+.contacts-payment-transfer__column_medium .contacts-payment-transfer__item {
+  height: 100%;
+}
+@media (max-width: 992.98px) {
+  .contacts-payment-transfer__column_medium {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .contacts-payment-transfer__column_medium {
+    flex: 1 1 100%;
+  }
+}
+.contacts-payment-transfer__column_btn {
+  justify-content: flex-start;
+}
+.files-contacts {
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  --borderWidth: 1px;
+  --borderGradient: linear-gradient(180deg, #081D57 0%, #062D80 100%);
+  position: relative;
+  background: linear-gradient(173.33deg, rgba(6, 11, 38, 0.41) 0%, rgba(26, 31, 55, 0.41) 100%);
+  backdrop-filter: blur(7.3000003815px);
+  -webkit-backdrop-filter: blur(7.3000003815px);
+  padding: 20px;
+}
+.files-contacts::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  padding: var(--borderWidth);
+  background-image: var(--borderGradient);
+  border-radius: inherit;
+  mask: conic-gradient(#000 0 0) content-box exclude, conic-gradient(#000 0 0);
+}
+.files-contacts__title {
+  position: relative;
+  z-index: 1;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 166.6666666667%;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.files-contacts__title:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+.files-contacts__choose-btn {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 110px;
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.4);
+  background: transparent;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12.9px;
+  line-height: 120.6976744186%;
+  letter-spacing: -0.13px;
+  color: #FFFFFF;
+}
+.files-contacts__choose-btn.active {
+  height: 49px;
+}
+.files-contacts__choose-btn.uploaded .uploaded {
+  display: inline-flex;
+}
+.files-contacts__choose-btn.uploaded .choose {
+  display: none;
+}
+.files-contacts__choose-btn .uploaded {
+  display: none;
+  align-items: center;
+  padding: 0 0 0 38px;
+  position: relative;
+}
+.files-contacts__choose-btn .uploaded::before {
+  position: absolute;
+  content: "";
+  flex: 0 0 18px;
+  width: 18px;
+  height: 13px;
+  background: url("../img/icons/check.svg") center no-repeat;
+  background-size: contain;
+  left: 0;
+}
+.files-contacts__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.files-contacts__items.active:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+.file-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #0199FF;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 142px;
+}
+
+.file-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  background: url("../img/icons/download.svg") center no-repeat;
+  background-size: contain;
+}
+.file-icon:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
+.file-name {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 125%;
+  color: #FFFFFF;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.file-name:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+
+.file-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 17px;
+  width: 17px;
+  height: 17px;
+  background: url("../img/icons/delete.svg") center no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease-out;
+  opacity: 0.4;
+  cursor: pointer;
+}
+@media (min-width: 1024.98px) {
+  .file-delete:hover {
+    opacity: 1;
+  }
+}
+
 .front-3 .order-history {
   padding: 0 0 120px 0;
 }

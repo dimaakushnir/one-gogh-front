@@ -12,6 +12,34 @@
     <svg display="none">
 </svg>
     <div class="wrapper">
+        <div class="popup popup-file popup-file-upload">
+            <div class="popup__body">
+                <div class="invoice-payment__body">
+                    <h4 class="invoice-payment__title">add file</h4>
+                    <form action="#" class="popup-file__form form-popup-file">
+                        <div class="form-popup-file__item">
+                            <input id="uploadFile" accept="" type='file' name='form[]' class='form-popup-file__input'>
+                            <div class="form-popup-file__button">Choose File</div>
+                        </div>
+                    </form>
+                    <button class="invoice-payment__btn-back btn btn_upload"><span>Upload</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="popup popup-file popup-file-payment">
+            <div class="popup__body">
+                <div class="invoice-payment__body">
+                    <h4 class="invoice-payment__title">add file</h4>
+                    <form action="#" class="popup-file__form form-popup-file">
+                        <div class="form-popup-file__item">
+                            <input id="paymentOrder" accept="" type='file' name='form[]' class='form-popup-file__input'>
+                            <div class="form-popup-file__button">Choose File</div>
+                        </div>
+                    </form>
+                    <button class="invoice-payment__btn-back btn btn_upload"><span>Upload</span></button>
+                </div>
+            </div>
+        </div>
         <header class="header">
     <div class="header__main">
         <div class="header__container container">
@@ -209,34 +237,111 @@
                             <div class="contacts-payment-transfer__row">
                                 <div class="contacts-payment-transfer__column">
                                     <div class="contacts-payment-transfer__item">
-                                        <div class="form__label">Email</div>
-                                        <input placeholder="Your email" autocomplete='off' type='email' name='form[]'
+                                        <div class="form__label">The Beneficiary`s Bank</div>
+                                        <div class="form__dropdown-block">
+                                            <div class="form__dropdown dropdown">
+                                                <button class='dropdown__btn'>Select bank</button>
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__item" data-dropdown="Bank 1">Bank 1</li>
+                                                    <li class="dropdown__item" data-dropdown="Bank 2">Bank 2</li>
+                                                    <li class="dropdown__item" data-dropdown="Bank 3">Bank 3</li>
+                                                    <li class="dropdown__item" data-dropdown="Bank 4">Bank 4</li>
+                                                </ul>
+                                                <input type='text' name='form[]' value=''
+                                                    class='dropdown__input-hidden'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts-payment-transfer__column">
+                                    <div class="contacts-payment-transfer__item">
+                                        <div class="form__label">Bank Adress</div>
+                                        <input placeholder="Enter Adress" autocomplete='off' type='text' name='form[]'
                                             class='form__input'>
                                     </div>
                                 </div>
                                 <div class="contacts-payment-transfer__column">
                                     <div class="contacts-payment-transfer__item">
-                                        <div class="form__label">Phone</div>
-                                        <input placeholder="Phone" autocomplete='off' type='tel' name='form[]'
+                                        <div class="form__label">SWIFT</div>
+                                        <input placeholder="****" autocomplete='off' type='text' name='form[]'
                                             class='form__input'>
                                     </div>
                                 </div>
                                 <div class="contacts-payment-transfer__column">
                                     <div class="contacts-payment-transfer__item">
-                                        <div class="form__label">Card Number</div>
-                                        <input placeholder="**** **** **** ****" type="text" id="card-number"
-                                            inputmode="numeric" maxlength="19" autocomplete="cc-number" name='form[]'
-                                            class='form__input cc-number'>
-                                    </div>
-                                </div>
-                                <div class="contacts-payment-transfer__column">
-                                    <div class="contacts-payment-transfer__item">
-                                        <div class="form__label">Cardholder's full name</div>
-                                        <input placeholder="Full name" autocomplete='off' type='text' name='form[]'
+                                        <div class="form__label">Beneficiary</div>
+                                        <input placeholder="Enter Adress" autocomplete='off' type='text' name='form[]'
                                             class='form__input'>
                                     </div>
                                 </div>
                                 <div class="contacts-payment-transfer__column">
+                                    <div class="contacts-payment-transfer__item">
+                                        <div class="form__label">Beneficiary address</div>
+                                        <input placeholder="Enter Adress" autocomplete='off' type='text' name='form[]'
+                                            class='form__input'>
+                                    </div>
+                                </div>
+                                <div class="contacts-payment-transfer__column">
+                                    <div class="contacts-payment-transfer__item">
+                                        <div class="form__label">IBAN (Account number)</div>
+                                        <input placeholder="Enter IBAN" autocomplete='off' type='text' name='form[]'
+                                            class='form__input'>
+                                    </div>
+                                </div>
+                                <div class="contacts-payment-transfer__column">
+                                    <div class="contacts-payment-transfer__item">
+                                        <div class="form__label">Purpose of payment</div>
+                                        <input placeholder="Enter" autocomplete='off' type='text' name='form[]'
+                                            class='form__input'>
+                                    </div>
+                                </div>
+                                <div class="contacts-payment-transfer__column">
+                                    <div class="contacts-payment-transfer__item">
+                                        <div class="form__label">Country</div>
+                                        <div class="form__dropdown-block">
+                                            <div class="form__dropdown dropdown">
+                                                <button class='dropdown__btn'>Select country</button>
+                                                <ul class="dropdown__list">
+                                                    <li class="dropdown__item" data-dropdown="Ukraine">Ukraine</li>
+                                                    <li class="dropdown__item" data-dropdown="Germany">Germany</li>
+                                                    <li class="dropdown__item" data-dropdown="China">China</li>
+                                                    <li class="dropdown__item" data-dropdown="England">England</li>
+                                                </ul>
+                                                <input type='text' name='form[]' value=''
+                                                    class='dropdown__input-hidden'>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts-payment-transfer__column contacts-payment-transfer__column_medium">
+                                    <div class="contacts-payment-transfer__item">
+                                        <div class="contacts-payment-transfer__files files-contacts">
+                                            <h4 class="files-contacts__title">uploaded Files</h4>
+                                            <div class="files-contacts__items files-contacts__items_upload-files">
+                                            </div>
+                                            <button
+                                                class="files-contacts__choose-btn files-contacts__choose-btn_upload">
+                                                <span class="choose">Choose File</span>
+                                                <span class="uploaded">File Uploaded</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts-payment-transfer__column contacts-payment-transfer__column_medium">
+                                    <div class="contacts-payment-transfer__item">
+                                        <div class="contacts-payment-transfer__files files-contacts">
+                                            <h4 class="files-contacts__title">Payment order</h4>
+                                            <div class="files-contacts__items files-contacts__items_payment-order">
+                                            </div>
+                                            <button
+                                                class="files-contacts__choose-btn files-contacts__choose-btn_payment">
+                                                <span class="choose">Choose File</span>
+                                                <span class="uploaded">File Uploaded</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contacts-payment-transfer__column contacts-payment-transfer__column_btn">
                                     <button type='submit' class='form__btn btn'>
                                         <span>Start OTC Deal</span>
                                     </button>
