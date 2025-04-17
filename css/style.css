@@ -1371,6 +1371,14 @@ body.lock {
   letter-spacing: -0.13px;
   color: rgba(255, 255, 255, 0.6);
 }
+.form-popup-file__preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.form-popup-file__preview.active:not(:last-child) {
+  margin: 0 0 20px 0;
+}
 
 .payment-transfer {
   position: relative;
@@ -1641,6 +1649,7 @@ body.lock {
 .files-contacts__items.active:not(:last-child) {
   margin: 0 0 20px 0;
 }
+
 .file-item {
   display: inline-flex;
   align-items: center;
