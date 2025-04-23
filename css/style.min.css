@@ -346,8 +346,35 @@ body.lock {
 .form__dropdown.active .dropdown__list {
   display: block;
 }
+.form__dropdown.active.dropdown_search::before {
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
 .form__dropdown.selected .dropdown__btn {
   color: #FFFFFF;
+}
+.form__dropdown.dropdown_search::before {
+  position: absolute;
+  content: "";
+  width: 11px;
+  height: 17px;
+  background: url("../img/icons/arrow-start.svg") center no-repeat;
+  background-size: contain;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  top: 18px;
+  right: 22px;
 }
 .form__dropdown .dropdown__btn {
   width: 100%;
@@ -390,10 +417,17 @@ body.lock {
 .form__dropdown .dropdown__btn .icon img {
   max-height: 26px;
 }
+.form__dropdown .dropdown__btn-input {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.form__dropdown .dropdown__btn-input::placeholder {
+  color: rgba(255, 255, 255, 0.5019607843);
+}
 .form__dropdown .dropdown__list {
   display: none;
   position: relative;
-  padding: 0 22px 11px 18px;
+  padding: 0 22px 0 18px;
   height: auto;
 }
 .form__dropdown .dropdown__item {
@@ -411,6 +445,9 @@ body.lock {
 }
 .form__dropdown .dropdown__item:not(:last-child) {
   margin: 0 0 12px 0;
+}
+.form__dropdown .dropdown__item:last-child {
+  margin: 0 0 11px 0;
 }
 .form__dropdown .dropdown__item .icon {
   display: inline-flex;
